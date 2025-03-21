@@ -2,11 +2,34 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  
+  // Track scroll direction to hide/show navbar
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // Scrolling down, hide navbar
+        setIsVisible(false);
+      } else {
+        // Scrolling up, show navbar
+        setIsVisible(true);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
 
   return (
     <header className="px-6 py-4 bg-white shadow-md">
@@ -16,7 +39,7 @@ const Navbar = () => {
           <Image
             src="/img/logo.png"
             alt="logo"
-            width={67}
+            width={87}
             height={96}
             className="object-contain"
           />
