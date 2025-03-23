@@ -8,10 +8,8 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  let lastScrollY = 0;
 
-  
-  // Track scroll direction to hide/show navbar
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > lastScrollY) {
@@ -21,7 +19,7 @@ const Navbar = () => {
         // Scrolling up, show navbar
         setIsVisible(true);
       }
-      setLastScrollY(window.scrollY);
+      lastScrollY = window.scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,10 +27,14 @@ const Navbar = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, []);
 
   return (
-    <header className="px-6 py-4 bg-white shadow-md">
+    <header
+      className={`fixed top-0 left-0 w-full px-6 py-4 bg-white shadow-md transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -75,7 +77,7 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed inset-0  z-50 transition-transform transform ${
+        className={`fixed inset-0 z-50 transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

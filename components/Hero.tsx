@@ -62,21 +62,26 @@ const Hero = () => {
 
         {/* Right Side - Image */}
         <motion.div 
-          className="hero-right hidden w-full md:w-1/2 md:flex lg:flex justify-center md:justify-end"
-          initial={{ opacity: 0, x: 50 }} 
-          animate={{ opacity: 1, x: 0 }} 
+          className="hero-right hidden w-full md:w-1/2 md:flex lg:flex justify-center md:justify-end relative"
+          initial={{ opacity: 0, x: 50, scale: 0.9 }} 
+          animate={{ opacity: 1, x: 0, scale: 1 }} 
           transition={{ duration: 1, ease: "easeOut", delay: 1 }}
         >
+          {/* Background Blur Effect */}
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-[#17426F] opacity-80 blur-lg"></div>
+
           <div className="relative w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[40vw] xl:w-[35vw] h-[50vh] sm:h-[60vh] md:h-[75vh]">
             <Image 
               src="/img/herooimg.png" 
               alt="Caregiver training"
               fill
-              className="object-contain"
+              className="object-contain drop-shadow-2xl rounded-xl transition-transform duration-700 ease-out 
+                        group-hover:scale-105 group-hover:shadow-2xl"
               priority
             />
           </div>
         </motion.div>
+
       </div>
     </div>
   );
