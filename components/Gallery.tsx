@@ -40,10 +40,10 @@ const Gallery = () => {
             1024: { slidesPerView: 3 },
             1280: { slidesPerView: 4 },
           }}
-          className="pb-10"
+          className="pb-10 "
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="relative group">
+            <SwiperSlide key={index} className="relative group bg-grey- border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;">
               <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src={image.src}
