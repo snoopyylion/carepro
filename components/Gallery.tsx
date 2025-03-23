@@ -43,18 +43,27 @@ const Gallery = () => {
           className="pb-10 "
         >
           {images.map((image, index) => (
-            <SwiperSlide key={index} className="relative group bg-grey- border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;">
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg overflow-hidden shadow-lg">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  priority
-                />
-              </div>
-            </SwiperSlide>
+            <SwiperSlide 
+            key={index} 
+            className="relative group bg-gray-800 border-[4px] border-gray-600 
+                       py-6 px-5 rounded-2xl shadow-lg transition-all duration-500 
+                       hover:border-green-700 hover:shadow-xl hover:bg-gradient-to-br 
+                       hover:from-gray-700 hover:to-gray-900"
+          >
+            <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] 
+                            rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-lg transform transition-transform 
+                           duration-500 group-hover:scale-105"
+                sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                priority
+              />
+            </div>
+          </SwiperSlide>
+          
           ))}
         </Swiper>
       </div>
