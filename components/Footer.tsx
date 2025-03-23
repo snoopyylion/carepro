@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
         {/* Social Media Section */}
-        <div className="text-center md:text-left justify-self-end self-end">
+        <div className="text-center md:text-left lg:justify-self-center sm:justify-self-end self-end">
           <h3 className="text-lg font-semibold mb-3">Stay Connected</h3>
           <div className="flex justify-center md:justify-start gap-4 mt-2">
             <div className=" rounded-full bg-gray-950 p-2">
