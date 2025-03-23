@@ -31,7 +31,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full px-6 py-4 bg-white shadow-md transition-transform duration-300 ${
+      className={`fixed top-0 left-0 w-full px-6 py-4 bg-white shadow-md transition-transform duration-300 z-50 ${
         isVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -49,21 +49,31 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-14 text-gray-800 font-medium">
-          <Link href="/" className="hover:text-blue-800 transition">
-            Home
-          </Link>
-          <Link href="/about" className="hover:text-blue-800 transition">
-            About Us
-          </Link>
-          <Link href="/gallery" className="hover:text-blue-800 transition">
-            Gallery
-          </Link>
-          <Link href="/faqs" className="hover:text-blue-800 transition">
-            FAQs
-          </Link>
-          <Link href="/contact" className="hover:text-blue-800 transition">
-            Contact Us
-          </Link>
+          <li>
+            <Link href="/" className="hover:text-blue-800 transition">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link href="/about" className="hover:text-blue-800 transition">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link href="/gallery" className="hover:text-blue-800 transition">
+              Gallery
+            </Link>
+          </li>
+          <li>
+            <Link href="/faqs" className="hover:text-blue-800 transition">
+              FAQs
+            </Link>
+          </li>
+          <li>
+            <Link href="/contact" className="hover:text-blue-800 transition">
+              Contact Us
+            </Link>
+          </li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -77,12 +87,16 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed inset-0 z-50 transition-transform transform ${
+        className={`fixed inset-0 z-50 transition-transform duration-300 transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        } bg-opacity-50`}
+        onClick={() => setIsOpen(false)}
       >
         {/* Sidebar Content */}
-        <div className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-5 flex flex-col">
+        <div
+          className="fixed top-0 right-0 w-64 h-[100dvh] bg-white shadow-lg p-5 flex flex-col transform transition-transform"
+          onClick={(e) => e.stopPropagation()}
+        >
           {/* Close Button */}
           <button
             className="self-end text-2xl text-gray-800"
@@ -93,21 +107,31 @@ const Navbar = () => {
 
           {/* Sidebar Links */}
           <ul className="flex flex-col gap-6 mt-10 text-gray-800 font-medium">
-            <Link href="/" onClick={() => setIsOpen(false)}>
-              Home
-            </Link>
-            <Link href="/about" onClick={() => setIsOpen(false)}>
-              About Us
-            </Link>
-            <Link href="/gallery" onClick={() => setIsOpen(false)}>
-              Gallery
-            </Link>
-            <Link href="/faqs" onClick={() => setIsOpen(false)}>
-              FAQs
-            </Link>
-            <Link href="/contact" onClick={() => setIsOpen(false)}>
-              Contact Us
-            </Link>
+            <li>
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about" onClick={() => setIsOpen(false)}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/gallery" onClick={() => setIsOpen(false)}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link href="/faqs" onClick={() => setIsOpen(false)}>
+                FAQs
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" onClick={() => setIsOpen(false)}>
+                Contact Us
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
