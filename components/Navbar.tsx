@@ -8,31 +8,34 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
-  
-  // Track scroll direction to hide/show navbar
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
-        // Scrolling down, hide navbar
+      if (window.scrollY > lastScrollY && window.scrollY > 50) {
+        // If scrolling down & past 50px, hide navbar
         setIsVisible(false);
       } else {
-        // Scrolling up, show navbar
+        // If scrolling up, show navbar
         setIsVisible(true);
       }
-      setLastScrollY(window.scrollY);
+      lastScrollY = window.scrollY;
     };
 
     window.addEventListener("scroll", handleScroll);
-
+    
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, []);
 
   return (
-    <header className="px-6 py-4 bg-white shadow-md">
+    <header
+      className={`fixed top-0 left-0 w-full bg-white shadow-md px-6 py-4 z-50 transition-transform duration-300 ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <nav className="flex justify-between items-center max-w-7xl mx-auto">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
@@ -75,13 +78,11 @@ const Navbar = () => {
 
       {/* Sidebar for Mobile */}
       <div
-        className={`fixed inset-0  z-50 transition-transform transform ${
+        className={`fixed inset-0 z-50 transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Sidebar Content */}
         <div className="fixed top-0 right-0 w-64 h-full bg-white shadow-lg p-5 flex flex-col">
-          {/* Close Button */}
           <button
             className="self-end text-2xl text-gray-800"
             onClick={() => setIsOpen(false)}
@@ -89,7 +90,6 @@ const Navbar = () => {
             <IoMdClose />
           </button>
 
-          {/* Sidebar Links */}
           <ul className="flex flex-col gap-6 mt-10 text-gray-800 font-medium">
             <Link href="/" onClick={() => setIsOpen(false)}>
               Home
