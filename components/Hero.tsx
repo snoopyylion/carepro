@@ -68,14 +68,12 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeOut", delay: 1 }}
         >
           {/* Background Blur Effect */}
-          <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-transparent to-[#17426F] opacity-80 blur-lg"></div>
-
-          <div className="relative w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[40vw] xl:w-[35vw] h-[50vh] sm:h-[60vh] md:h-[75vh]">
+          <div className="relative w-[80vw] sm:w-[70vw] md:w-[50vw] lg:w-[40vw] xl:w-[55vw] h-[50vh] sm:h-[60vh] md:h-[80vh]">
             <Image 
-              src="/img/herooimg.png" 
+              src="/img/hero-img.png" 
               alt="Caregiver training"
               fill
-              className="object-contain drop-shadow-2xl rounded-xl transition-transform duration-700 ease-out 
+              className="drop-shadow-2xl rounded-xl transition-transform duration-700 ease-out 
                         group-hover:scale-105 group-hover:shadow-2xl"
               priority
             />
