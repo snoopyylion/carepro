@@ -19,9 +19,9 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const openImage = (src) => setSelectedImage(src);
+  const openImage = (src: string) => setSelectedImage(src);
   const closeImage = () => setSelectedImage(null);
 
   return (
