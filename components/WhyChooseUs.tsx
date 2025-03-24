@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Button from './Button'
 
 const WhyChooseUs = () => {
   return (
@@ -56,9 +57,7 @@ const WhyChooseUs = () => {
 
           {/* CTA Button */}
           <div className="mt-6">
-            <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-all">
-              Enroll Now
-            </button>
+            <Button title='ENROLL NOW' containerClass="!bg-green-600 hover:!bg-green-700 text-white uppercase py-3 px-6 rounded-lg shadow-md transition-all"/>
           </div>
 
         </div>

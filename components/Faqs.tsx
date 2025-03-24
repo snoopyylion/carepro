@@ -139,7 +139,7 @@ const FAQSection = () => {
             />
             <button
               type="submit"
-              className="bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 text-sm sm:text-base md:text-lg"
+              className="group relative z-10 w-fit cursor-pointer overflow-hidden rounded-sm uppercase  bg-green-600 hover:bg-green-700 font-semibold px-6 py-3 shadow-md transition duration-300"
             >
               Subscribe
             </button>
