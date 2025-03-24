@@ -24,7 +24,7 @@ const faqs = [
   
 
 const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -54,7 +54,7 @@ const FAQSection = () => {
     }
   };
 
-  const toggleFAQ = (index) => {
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
