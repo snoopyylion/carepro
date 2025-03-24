@@ -25,10 +25,10 @@ const Gallery = () => {
   const closeImage = () => setSelectedImage(null);
 
   return (
-    <section className="bg-[#132c46] text-white py-20 px-6 sm:px-10 md:px-20">
+    <section className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-white tracking-wide mb-14">Our Gallery
+        <h2 className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">Our Gallery
         </h2>
 
         {/* Swiper Carousel */}

@@ -59,7 +59,7 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-[#132c46] text-white py-16 px-4 sm:px-10 md:px-20">
+    <section className="bg-[#17426F] text-white py-16 px-4 sm:px-10 md:px-20">
       <div className="max-w-4xl mx-auto">
         {/* FAQ Section */}
         <motion.div
@@ -82,11 +82,11 @@ const FAQSection = () => {
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
-                className="border border-gray-700 rounded-lg p-4 bg-gray-800 hover:border-green-400 transition-all duration-300"
+                className="border border-gray-700 rounded-lg p-4 bg-gradient-to-r from-blue-950 to-green-950 hover:border-green-400 transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
               >
                 <button
-                  className="flex justify-between items-center w-full text-base sm:text-lg md:text-xl font-medium"
+                  className="flex justify-between items-center w-full text-base sm:text-lg md:text-xl font-bold"
                   onClick={() => toggleFAQ(index)}
                 >
                   <span>{faq.question}</span>
@@ -99,7 +99,7 @@ const FAQSection = () => {
                 <AnimatePresence>
                   {openIndex === index && (
                     <motion.div
-                      className="mt-2 text-gray-300 text-sm sm:text-base md:text-lg"
+                      className="mt-2 text-gray-300 font-thin text-sm sm:text-base md:text-lg"
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
@@ -116,7 +116,7 @@ const FAQSection = () => {
 
         {/* Subscribe Section */}
         <motion.div
-          className="bg-gray-800 rounded-lg p-6 shadow-lg"
+          className="bg-gradient-to-r from-blue-950 to-green-950 rounded-lg p-6 shadow-lg"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}

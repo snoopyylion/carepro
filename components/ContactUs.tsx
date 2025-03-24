@@ -11,10 +11,10 @@ const ContactUs = () => {
         </div>
 
         {/* Full-width flex container */}
-        <div className="flex flex-col md:flex-row w-full h-auto md:h-[90vh] bg-[#132c46] overflow-hidden">
+        <div className="flex flex-col md:flex-row w-full h-auto md:h-[90vh] bg-[#17426F] overflow-hidden">
           
           {/* Left Side: Form */}
-          <div className="flex-1 flex justify-center items-center p-10 bg-[#132c46]">
+          <div className="flex-1 flex justify-center items-center p-10 bg-[#17426F]">
             <div className="w-full max-w-lg p-6 sm:p-10 rounded-lg shadow-md bg-white">
               <h2 className="text-2xl font-light text-[#132c46] text-center mb-6">Send A Message</h2>
               <form className="space-y-4">
