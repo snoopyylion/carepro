@@ -11,11 +11,11 @@ import "swiper/css/autoplay";
 
 const images = [
   { src: "/img/aboutimg.png", alt: "Project 1" },
-  { src: "/img/herooimg.png", alt: "Project 2" },
+  { src: "/img/galleryimg2.png", alt: "Project 2" },
   { src: "/img/whyimg.png", alt: "Project 3" },
-  { src: "/img/malenurse.png", alt: "Project 4" },
-  { src: "/img/herooimg.png", alt: "Project 5" },
-  { src: "/img/whyimg.png", alt: "Project 6" },
+  { src: "/img/galleryimg1.png", alt: "Project 4" },
+  { src: "/img/galleryimg3.png", alt: "Project 5" },
+  { src: "/img/galleryimg2.png", alt: "Project 6" },
 ];
 
 const Gallery = () => {
