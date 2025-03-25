@@ -70,7 +70,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-blue-800 transition">
+            <Link href="/Contact" className="hover:text-blue-800 transition">
               Contact Us
             </Link>
           </li>
@@ -128,7 +128,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <Link href="/Contact" onClick={() => setIsOpen(false)}>
                 Contact Us
               </Link>
             </li>
