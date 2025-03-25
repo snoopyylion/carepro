@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -11,26 +11,54 @@ import "swiper/css/autoplay";
 interface Video {
   id: string;
   title: string;
-  thumbnail: string;
   url: string;
+  thumbnail?: string;
 }
 
 const videos: Video[] = [
-  { id: "1", title: "Training Session", thumbnail: "/img/video1.jpg", url: "https://www.youtube.com/embed/example1" },
-  { id: "2", title: "Caregiver Workshop", thumbnail: "/img/video2.jpg", url: "https://www.youtube.com/embed/example2" },
-  { id: "3", title: "Student Testimonial", thumbnail: "/img/video3.jpg", url: "https://www.youtube.com/embed/example3" },
-  { id: "4", title: "Hands-on Training", thumbnail: "/img/video4.jpg", url: "https://www.youtube.com/embed/example4" },
+  { id: "1", title: "Video", url: "/vid/vid1.mp4" },
+  { id: "2", title: "Video 1", url: "/vid/vid2.mp4" },
+  { id: "3", title: "Video 2", url: "/vid/vid3.mp4" },
+  { id: "5", title: "Video 4", url: "/vid/vid5.mp4" },
+  { id: "6", title: "Video 5", url: "/vid/vid6.mp4" },
+  { id: "7", title: "Video 6", url: "/vid/vid7.mp4" },
 ];
 
 const VideoGallery: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+  const [videoThumbnails, setVideoThumbnails] = useState<{ [key: string]: string }>({});
+  const videoRefs = useRef<{ [key: string]: HTMLVideoElement | null }>({});
+
+  useEffect(() => {
+    videos.forEach((video) => {
+      const videoElement = document.createElement("video");
+      videoElement.src = video.url;
+      videoElement.crossOrigin = "anonymous";
+      videoElement.preload = "metadata";
+
+      videoElement.onloadeddata = () => {
+        const canvas = document.createElement("canvas");
+        const context = canvas.getContext("2d");
+
+        if (context) {
+          canvas.width = 320;
+          canvas.height = 180;
+          context.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+          const thumbnailUrl = canvas.toDataURL("image/png");
+          setVideoThumbnails((prev) => ({ ...prev, [video.id]: thumbnailUrl }));
+        }
+      };
+
+      videoRefs.current[video.id] = videoElement;
+    });
+  }, []);
 
   return (
     <section className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h2 className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">
-            What Our Students Are Saying
+          What Our Students Are Saying
         </h2>
 
         {/* Swiper Carousel */}
@@ -58,13 +86,26 @@ const VideoGallery: React.FC = () => {
                 className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] cursor-pointer"
                 onClick={() => setSelectedVideo(video.url)}
               >
+                {/* Video Thumbnail or Placeholder */}
                 <img
-                  src={video.thumbnail}
+                  src={videoThumbnails[video.id] || "/default-thumbnail.jpg"}
                   alt={video.title}
                   className="object-cover w-full h-full rounded-xl transform transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-3xl font-bold">▶</span>
+
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+
+                {/* Video Title */}
+                <div className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg sm:text-xl">
+                  {video.title}
+                </div>
+
+                {/* Play Button */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-4xl font-bold bg-black bg-opacity-50 px-5 py-3 rounded-full">
+                    ▶
+                  </span>
                 </div>
               </div>
             </SwiperSlide>
@@ -85,12 +126,12 @@ const VideoGallery: React.FC = () => {
             >
               &times;
             </button>
-            <iframe
+            <video
               src={selectedVideo}
-              title="Video"
+              controls
+              autoPlay
               className="w-full h-[60vh] rounded-lg shadow-lg"
-              allowFullScreen
-            ></iframe>
+            ></video>
           </div>
         </div>
       )}

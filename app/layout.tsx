@@ -5,8 +5,8 @@ import { Poppins, Inter } from "next/font/google";
 // Define font styles
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "700"], // Use different font weights
-  variable: "--font-poppins", // Create a CSS variable for Tailwind
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
 });
 
 const inter = Inter({

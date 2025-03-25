@@ -3,6 +3,7 @@
 import AboutSection from "@/components/AboutSection";
 import AboutText from "@/components/AboutText";
 import Testimonials from "@/components/Testimonials";
+import Title from "@/components/Title";
 import VideoGallery from "@/components/VideoGallery";
 import { motion } from "framer-motion";
 
@@ -15,14 +16,11 @@ const page = () => {
     >
       {/* Title */}
       <motion.div 
-        className="about-title mt-20 flex justify-center items-center py-8"
+        className="about-title mt-14 flex justify-center items-center py-8"
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.8 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-600">
-          About Care-Pro Academy
-        </h2>
       </motion.div>
 
       {/* Sections */}
@@ -30,7 +28,6 @@ const page = () => {
         title="Enriching Lives" 
         text="Welcome to Care-Pro Academy, a premier healthcare training institution based in Lagos, specializing in assistant healthcare and careworker training..."
         imgSrc="/img/aboutimg.png"
-        reverse
       />
 
       <motion.div
@@ -45,13 +42,13 @@ const page = () => {
         title="Our Vision" 
         text="To redefine caregiving through education, shaping a new generation of globally certified and compassionate professionals."
         imgSrc="/img/aboutimg.png"
+        reverse
       />
 
       <AboutSection 
         title="Our Mission" 
         text="To train caregivers with cutting-edge methodologies, hands-on experience, and globally recognized certifications..."
         imgSrc="/img/aboutimg.png"
-        reverse
       />
 
       <motion.div

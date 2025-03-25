@@ -55,7 +55,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/aboutus" className="hover:text-blue-800 transition">
+            <Link href="/AboutUs" className="hover:text-blue-800 transition">
               About Us
             </Link>
           </li>
@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/faqs" className="hover:text-blue-800 transition">
+            <Link href="/Faqs" className="hover:text-blue-800 transition">
               FAQs
             </Link>
           </li>
@@ -113,7 +113,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/aboutus" onClick={() => setIsOpen(false)}>
+              <Link href="/AboutUs" onClick={() => setIsOpen(false)}>
                 About Us
               </Link>
             </li>
@@ -123,7 +123,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/faqs" onClick={() => setIsOpen(false)}>
+              <Link href="/Faqs" onClick={() => setIsOpen(false)}>
                 FAQs
               </Link>
             </li>

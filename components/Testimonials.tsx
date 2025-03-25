@@ -31,7 +31,7 @@ const Testimonials = () => {
     <div className="py-12 bg-white mt-20">
       <div className="max-w-6xl mx-auto text-center px-4">
         {/* Section Header */}
-        <h2 className="text-3xl font-bold text-green-600 mb-20">Testimonials</h2>
+        <h2 className="text-3xl font-bold sm:text-4xl text-center tracking-wide mb-14 text-green-600">Testimonials</h2>
 
         {/* Testimonials Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
