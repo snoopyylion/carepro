@@ -56,7 +56,7 @@ const Hero = () => {
             animate={{ opacity: 1 }} 
             transition={{ duration: 1, delay: 0.9 }}
           >
-            <Button id="Enrol Now" title="Enrol Now" containerClass="!bg-green-600 flex-center" />
+            <Button id="Enrol Now" title="Enroll Now" containerClass="!bg-green-600 flex-center" />
           </motion.div>
         </motion.div>
 
