@@ -75,7 +75,17 @@ const FAQSection = () => {
             Still have more questions? You can contact our team via
           </p>
           <p className="mb-10 text-center text-green-600 text-sm sm:text-base md:text-lg">
-            careproacademyltd@gmail.com / +234 812 544 4216 or +234 811 295 3103
+            <a href="mailto:careproacademyltl@gmail.com" className="hover:underline">
+                careproacademyltl@gmail.com
+              </a><br /> <span>
+                <a href="tel:+2348125444216" className="hover:underline">
+                  +234 812 544 4216
+                </a>{" "}
+                or{" "}
+                <a href="tel:+2348112953103" className="hover:underline">
+                  +234 811 295 3103
+                </a>
+              </span>
           </p>
 
           <div className="space-y-4">
