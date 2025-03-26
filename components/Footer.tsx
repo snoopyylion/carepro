@@ -41,33 +41,22 @@ const Footer = () => {
         <div className="text-center md:text-left lg:justify-self-center sm:justify-self-end self-end">
           <h3 className="text-lg font-semibold mb-3">Stay Connected</h3>
           <div className="flex justify-center md:justify-start gap-4 mt-2">
-            <div className=" rounded-full bg-gray-950 p-2">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
+            <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                <a href="https://www.facebook.com/share/16QcSUtUDs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
                 <FaFacebookF />
                 </a>
             </div>
-            
-            <div className=" rounded-full bg-gray-950 p-2">
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
-                <FaTwitter />
-                </a>
-            </div>
-            <div className=" rounded-full bg-gray-950 p-2">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
-                <FaLinkedinIn />
-                </a>
-            </div>
-            <div className=" rounded-full bg-gray-950 p-2">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
+            <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                <a href="https://www.instagram.com/careproacademy?igsh=OTc2OWkyNzl1ZmRh" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
                 <FaInstagram />
                 </a>
             </div>
-            <div className=" rounded-full bg-gray-950 p-2">
+            <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
                 <a href="tel:+1234567890" className="text-sm hover:text-green-600 transition">
                 <FaPhone />
                 </a>
             </div>
-            <div className=" rounded-full bg-gray-950 p-2">
+            <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
             <a href="mailto:info@carepro.com" className="text-sm hover:text-green-600 transition">
               <FaEnvelope />
             </a>

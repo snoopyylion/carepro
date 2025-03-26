@@ -1,5 +1,6 @@
 "use client";
-import { Mail, MapPin, Phone, Facebook, Twitter, Instagram } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { FaFacebookF,FaInstagram, FaPhone, FaEnvelope } from "react-icons/fa";
 import Button from "@/components/Button";
 import Cta from "@/components/Cta";
 import React from "react";
@@ -53,12 +54,30 @@ const page = () => {
 
           {/* Contact Connect */}
           <div className="contact-connect mt-46 relative z-10">
-            <h3 className="font-semibold mb-2">Stay Connected</h3>
-            <div className="social-icons flex gap-4">
-              <a href="https://www.facebook.com/share/16QcSUtUDs/?mibextid=wwXIfr "><Facebook size={20} /></a>     
-              <Twitter size={20} />
-              <a href="https://www.instagram.com/careproacademy?igsh=OTc2OWkyNzl1ZmRh "><Instagram size={20} /></a>
-            </div>
+           <h3 className="text-lg font-semibold mb-3">Stay Connected</h3>
+                     <div className="flex justify-center md:justify-start gap-4 mt-2">
+                       <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                           <a href="https://www.facebook.com/share/16QcSUtUDs/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
+                           <FaFacebookF />
+                           </a>
+                       </div>
+                       <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                           <a href="https://www.instagram.com/careproacademy?igsh=OTc2OWkyNzl1ZmRh" target="_blank" rel="noopener noreferrer" className="text-sm hover:text-green-600 transition">
+                           <FaInstagram />
+                           </a>
+                       </div>
+                       <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                           <a href="tel:+1234567890" className="text-sm hover:text-green-600 transition">
+                           <FaPhone />
+                           </a>
+                       </div>
+                       <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
+                       <a href="mailto:info@carepro.com" className="text-sm hover:text-green-600 transition">
+                         <FaEnvelope />
+                       </a>
+                       </div>
+                     </div>
+           
           </div>
         </div>
 
