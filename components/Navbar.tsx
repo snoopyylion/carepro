@@ -8,26 +8,27 @@ import { IoMdMenu, IoMdClose } from "react-icons/io";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
-  let lastScrollY = 0;
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > lastScrollY) {
+      if (window.scrollY < 10) {
+        // Always show navbar when at the top
+        setIsVisible(true);
+      } else if (window.scrollY > lastScrollY + 10) {
         // Scrolling down, hide navbar
         setIsVisible(false);
-      } else {
+      } else if (window.scrollY < lastScrollY - 10) {
         // Scrolling up, show navbar
         setIsVisible(true);
       }
-      lastScrollY = window.scrollY;
+
+      setLastScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <header

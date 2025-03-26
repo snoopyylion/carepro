@@ -18,7 +18,7 @@ const page = () => {
       <div className="contact-section flex flex-col md:flex-row bg-white rounded-3xl p-6 sm:p-12">
         {/* Left Side - Contact Info */}
         <div className="contact-left bg-[#17426F] text-white p-6 rounded-lg w-full md:w-2/5 relative overflow-hidden flex flex-col justify-between">
-          <div className="contact-info space-y-4 sm:space-y-6 relative p-6 sm:p-8 z-10">
+          <div className="contact-info space-y-4 sm:space-y-6 relative p-6 sm:p-8 z-20 mb-10">
             <div className="i">
                 <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-6">Contact Information</h2>
             </div>
