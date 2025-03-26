@@ -29,6 +29,7 @@ const Cta = () => {
           <Button
             title="Enroll Now"
             id="cta-button"
+            href="https://wa.me/2348125444216"
             containerClass="!bg-[#17426F] text-white px-5 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 rounded-lg text-sm sm:text-base md:text-lg font-semibold hover:!bg-[#17428F] transition w-full md:w-auto"
           />
         </div>

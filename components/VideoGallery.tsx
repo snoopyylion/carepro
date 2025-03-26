@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import { motion } from "framer-motion";
 
 interface Video {
   id: string;
@@ -16,13 +17,14 @@ interface Video {
 }
 
 const videos: Video[] = [
-  { id: "1", title: "Video", url: "/vid/vid1.mp4" },
-  { id: "2", title: "Video 1", url: "/vid/vid2.mp4" },
-  { id: "3", title: "Video 2", url: "/vid/vid3.mp4" },
-  { id: "5", title: "Video 4", url: "/vid/vid5.mp4" },
-  { id: "6", title: "Video 5", url: "/vid/vid6.mp4" },
-  { id: "7", title: "Video 6", url: "/vid/vid7.mp4" },
+  { id: "1", title: "Video", url: "/vid/vid1.mp4", thumbnail: "/img/galleryimg7.jpg" },
+  { id: "2", title: "Video 1", url: "/vid/vid2.mp4", thumbnail: "/img/galleryimg9.jpg" },
+  { id: "3", title: "Video 2", url: "/vid/vid3.mp4", thumbnail: "/img/galleryimg11.jpg" },
+  { id: "5", title: "Video 4", url: "/vid/vid5.mp4", thumbnail: "/img/galleryimg10.jpg" },
+  { id: "6", title: "Video 5", url: "/vid/vid6.mp4", thumbnail: "/img/galleryimg16.jpg" },
+  { id: "7", title: "Video 6", url: "/vid/vid7.mp4", thumbnail: "/img/galleryimg19.jpg" },
 ];
+
 
 const VideoGallery: React.FC = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
@@ -54,12 +56,22 @@ const VideoGallery: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
+    <motion.section
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+    className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">
+        <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }} 
+        className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">
           What Our Students Are Saying
-        </h2>
+        </motion.h2>
 
         {/* Swiper Carousel */}
         <Swiper
@@ -79,36 +91,38 @@ const VideoGallery: React.FC = () => {
         >
           {videos.map((video) => (
             <SwiperSlide
-              key={video.id}
-              className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
+            key={video.id}
+            className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
+          >
+            <div
+              className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] cursor-pointer"
+              onClick={() => setSelectedVideo(video.url)}
             >
-              <div
-                className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] cursor-pointer"
-                onClick={() => setSelectedVideo(video.url)}
-              >
-                {/* Video Thumbnail or Placeholder */}
-                <img
-                  src={videoThumbnails[video.id] || "/default-thumbnail.jpg"}
+              {/* Video Thumbnail or Placeholder */}
+              <img
+                  src={video.thumbnail || "/default-thumbnail.jpg"}
                   alt={video.title}
                   className="object-cover w-full h-full rounded-xl transform transition-transform duration-500 group-hover:scale-105"
                 />
 
-                {/* Dark Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-
-                {/* Video Title */}
-                <div className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg sm:text-xl">
-                  {video.title}
-                </div>
-
-                {/* Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-white text-4xl font-bold bg-black bg-opacity-50 px-5 py-3 rounded-full">
-                    ▶
-                  </span>
-                </div>
+          
+              {/* Dark Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+          
+              {/* Video Title */}
+              <div className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg sm:text-xl">
+                {video.title}
               </div>
-            </SwiperSlide>
+          
+              {/* Play Button */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <span className="text-white text-4xl font-bold bg-black bg-opacity-50 px-5 py-3 rounded-full">
+                  ▶
+                </span>
+              </div>
+            </div>
+          </SwiperSlide>
+          
           ))}
         </Swiper>
       </div>
@@ -135,7 +149,7 @@ const VideoGallery: React.FC = () => {
           </div>
         </div>
       )}
-    </section>
+    </motion.section>
   );
 };
 

@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
 
           {/* CTA Button */}
           <div className="mt-6">
-            <Button title='ENROLL NOW' containerClass="!bg-green-600 hover:!bg-green-700 text-white uppercase py-3 px-6 rounded-lg shadow-md transition-all"/>
+            <Button title='ENROLL NOW' href="https://wa.me/2348125444216" containerClass="!bg-green-600 hover:!bg-green-700 text-white uppercase py-3 px-6 rounded-lg shadow-md transition-all"/>
           </div>
 
         </div>

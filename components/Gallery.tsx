@@ -8,6 +8,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
+import { motion } from "framer-motion";
+
 
 const images = [
   { src: "/img/galleryimg1.png", alt: "Gallery Image 1" },
@@ -55,11 +57,21 @@ const Gallery = () => {
   const closeImage = () => setSelectedImage(null);
 
   return (
-    <section className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
+    <motion.section
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+    className="bg-[#17426F] text-white mt-5 py-20 px-6 sm:px-10 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">Our Gallery
-        </h2>
+        <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }} 
+        className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">Our Gallery
+        </motion.h2>
 
         {/* Swiper Carousel */}
         <Swiper
@@ -79,23 +91,24 @@ const Gallery = () => {
         >
           {images.map((image, index) => (
             <SwiperSlide
-              key={index}
-              className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
+            key={index}
+            className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
+          >
+            <div
+              className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] cursor-pointer"
+              onClick={() => openImage(image.src)}
             >
-              <div
-                className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] cursor-pointer"
-                onClick={() => openImage(image.src)}
-              >
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-105"
-                  sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                  priority
-                />
-              </div>
-            </SwiperSlide>
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover rounded-xl transform transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 480px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                priority
+              />
+            </div>
+          </SwiperSlide>
+          
           ))}
         </Swiper>
       </div>
@@ -123,7 +136,7 @@ const Gallery = () => {
           </div>
         </div>
       )}
-    </section>
+    </motion.section>
   );
 };
 

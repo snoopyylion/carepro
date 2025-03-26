@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-green-600 transition">
+            <Link href="/Gallery" className="hover:text-green-600 transition">
               Gallery
             </Link>
           </li>
@@ -119,7 +119,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/gallery"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
+              <Link href="/Gallery"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Gallery
               </Link>
             </li>
