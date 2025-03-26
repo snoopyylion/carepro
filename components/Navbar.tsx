@@ -51,27 +51,27 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-14 text-gray-800 font-medium">
           <li>
-            <Link href="/" className="hover:text-blue-800 transition">
+            <Link href="/" className="hover:text-green-600 transition">
               Home
             </Link>
           </li>
           <li>
-            <Link href="/AboutUs" className="hover:text-blue-800 transition">
+            <Link href="/AboutUs" className="hover:text-green-600 transition">
               About Us
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-blue-800 transition">
+            <Link href="/gallery" className="hover:text-green-600 transition">
               Gallery
             </Link>
           </li>
           <li>
-            <Link href="/Faqs" className="hover:text-blue-800 transition">
+            <Link href="/Faqs" className="hover:text-green-600 transition">
               FAQs
             </Link>
           </li>
           <li>
-            <Link href="/Contact" className="hover:text-blue-800 transition">
+            <Link href="/Contact" className="hover:text-green-600 transition">
               Contact Us
             </Link>
           </li>
@@ -109,27 +109,27 @@ const Navbar = () => {
           {/* Sidebar Links */}
           <ul className="flex flex-col gap-6 mt-10 text-gray-800 font-medium">
             <li>
-              <Link href="/" onClick={() => setIsOpen(false)}>
+              <Link href="/"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/AboutUs" onClick={() => setIsOpen(false)}>
+              <Link href="/AboutUs"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/gallery" onClick={() => setIsOpen(false)}>
+              <Link href="/gallery"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Gallery
               </Link>
             </li>
             <li>
-              <Link href="/Faqs" onClick={() => setIsOpen(false)}>
+              <Link href="/Faqs"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 FAQs
               </Link>
             </li>
             <li>
-              <Link href="/Contact" onClick={() => setIsOpen(false)}>
+              <Link href="/Contact"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Contact Us
               </Link>
             </li>
