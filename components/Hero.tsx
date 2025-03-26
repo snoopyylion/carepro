@@ -72,12 +72,12 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0, scale: 1 }} 
           transition={{ duration: 1, ease: "easeOut", delay: 1 }}
         >
-          <div className="relative w-[80%] max-w-[460px] h-auto">
+          <div className="relative w-[90%] max-w-[600px] h-auto">
             <Image 
               src="/img/hero-img.png" 
               alt="Caregiver training"
-              width={460}
-              height={600}
+              width={600}
+              height={700}
               className="rounded-2xl shadow-xl object-cover"
               priority
             />

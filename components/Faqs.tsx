@@ -18,7 +18,7 @@ const faqs = [
     },
     {
       "question": "What are the benefits included in the program?",
-      "answer": "Our program includes hands-on training with experienced healthcare professionals, job placement assistance for international opportunities, visa guidance, and networking opportunities with global recruiters. Additionally, students receive mentorship and career counseling to help them transition into the caregiving profession abroad."
+      "answer": "Our program includes hands-on training with experienced healthcare professionals, visa guidance, and networking opportunities with global recruiters. Additionally, students receive mentorship and career counseling to help them transition into the caregiving profession abroad."
     }
   ]
   
