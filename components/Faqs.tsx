@@ -149,10 +149,11 @@ const FAQSection = () => {
             />
             <button
               type="submit"
-              className="group relative z-10 w-fit cursor-pointer overflow-hidden rounded-sm uppercase  bg-green-600 hover:bg-green-700 font-semibold px-6 py-3 shadow-md transition duration-300"
+              className="group relative z-10 w-fit cursor-pointer overflow-hidden rounded-sm bg-green-600 hover:bg-green-700 font-semibold px-4 sm:px-6 py-2.5 sm:py-3 text-sm sm:text-base shadow-md transition duration-300 uppercase"
             >
               Subscribe
             </button>
+
           </form>
 
           {message && (
