@@ -59,7 +59,7 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-6"
           >
-            <Button title="Learn More" href="/AboutUs" containerClass="!bg-green-600 !hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300" />
+            <Button title="Learn More" href="/aboutus" containerClass="!bg-green-600 !hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300" />
           </motion.div>
         </motion.div>
 
