@@ -105,8 +105,8 @@ const page: React.FC = () => {
 
             <div className="email flex items-center gap-2 sm:gap-3 text-sm sm:text-base">
               <Mail size={18} />
-              <a href="mailto:careproacademyltl@gmail.com" className="hover:underline">
-                careproacademyltl@gmail.com
+              <a href="mailto:careproacademyltd@gmail.com" className="hover:underline">
+                careproacademyltd@gmail.com
               </a>
             </div>
 
