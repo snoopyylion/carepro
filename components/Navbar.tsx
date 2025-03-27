@@ -56,22 +56,22 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/aboutus" className="hover:text-green-600 transition">
+            <Link href="/AboutUs" className="hover:text-green-600 transition">
               About Us
             </Link>
           </li>
           <li>
-            <Link href="/gallery" className="hover:text-green-600 transition">
+            <Link href="/Gallery" className="hover:text-green-600 transition">
               Gallery
             </Link>
           </li>
           <li>
-            <Link href="/faqs" className="hover:text-green-600 transition">
+            <Link href="/Faqs" className="hover:text-green-600 transition">
               FAQs
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-green-600 transition">
+            <Link href="/Contact" className="hover:text-green-600 transition">
               Contact Us
             </Link>
           </li>
@@ -114,22 +114,22 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/aboutus"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
+              <Link href="/AboutUs"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 About Us
               </Link>
             </li>
             <li>
-              <Link href="/gallery"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
+              <Link href="/Gallery"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Gallery
               </Link>
             </li>
             <li>
-              <Link href="/faqs"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
+              <Link href="/Faqs"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 FAQs
               </Link>
             </li>
             <li>
-              <Link href="/contact"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
+              <Link href="/Contact"className="hover:text-green-600 transition" onClick={() => setIsOpen(false)}>
                 Contact Us
               </Link>
             </li>
