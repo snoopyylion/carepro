@@ -21,9 +21,9 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold mb-3">Company</h3>
           <ul className="space-y-2">
-            <li><Link href="/about" className="hover:text-green-400 transition">About Us</Link></li>
-            <li><Link href="/privacy-policy" className="hover:text-green-400 transition">Privacy Policy</Link></li>
-            <li><Link href="/terms" className="hover:text-green-400 transition">Terms & Conditions</Link></li>
+            <li><Link href="/aboutus" className="hover:text-green-400 transition">About Us</Link></li>
+            <li><Link href="https://wa.me/2348125444216" className="hover:text-green-400 transition">Privacy Policy</Link></li>
+            <li><Link href="https://wa.me/2348125444216" className="hover:text-green-400 transition">Terms & Conditions</Link></li>
           </ul>
         </div>
 
@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="text-center md:text-left">
           <h3 className="text-lg font-semibold mb-3">Support</h3>
           <ul className="space-y-2">
-            <li><Link href="/support" className="hover:text-green-400 transition">Get Support</Link></li>
+            <li><Link href="https://wa.me/2348125444216" className="hover:text-green-400 transition">Get Support</Link></li>
             <li><Link href="/contact" className="hover:text-green-400 transition">Contact Us</Link></li>
             <li><Link href="/faqs" className="hover:text-green-400 transition">FAQs</Link></li>
           </ul>
