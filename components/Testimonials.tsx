@@ -6,11 +6,10 @@ const testimonialsData = [
   { id: 1, name: "Grace Adekunle", image: "/img/test1.png", text: "“Care-Pro Academy gave me the skills and certification I needed to secure a caregiver job in Canada. The training was top-notch, and the instructors were incredibly supportive. I’m now living my dream abroad!" },
   { id: 2, name: "Toyin Odegbams", image: "/img/test2.png", text: "The hands-on training at Care-Pro Academy was exactly what I needed. It prepared me for real-life caregiving situations and made my transition into the healthcare sector seamless. I highly recommend it!" },
   { id: 3, name: "Michael Yusuf", image: "/img/test3.png", text: "Care-Pro Academy not only provided me with a quality education but also guided me through the process of securing a job overseas. If you’re serious about relocating through caregiving, this is the right place!" },
-  { id: 4, name: "John Benson", image: "/img/test4.png", text: "The trainers at Care-Pro Academy go beyond just teaching. They prepare you for the real world. Their step-by-step guidance helped me transition into a caregiver role in the UK with ease" },
+  { id: 4, name: "John Benson", image: "https://media.licdn.com/dms/image/v2/D4D03AQHrOYAoK6f6ag/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1709351738555?e=2147483647&v=beta&t=yEMuCdwm7LcrtC4wd95ZFg7pxrAq9F4pPUAM6JPh7tY", text: "The trainers at Care-Pro Academy go beyond just teaching. They prepare you for the real world. Their step-by-step guidance helped me transition into a caregiver role in the UK with ease" },
   { id: 5, name: "Joshua Tam", image: "/img/test5.png", text: "I didn’t just get a certificate; I got a career path." },
   { id: 6, name: "Belle Sumebo", image: "/img/test6.png", text: "I never knew caregiving could be a pathway to a better future until I joined Care-Pro Academy. The training was detailed, and the opportunities are endless." },
-  { id: 7, name: "Tifase Oluwaseyi", image: "/img/test1.png", text: "Very professional and well organized!" },
-  { id: 8, name: "Thomas Susan", image: "/img/test5.png", text: "Exceeded my expectations. 5 stars!" },
+  { id: 7, name: "Thomas Susan", image: "/img/test4.png", text: "Exceeded my expectations. 5 stars!" },
 ];
 
 const itemsPerPage = 6;

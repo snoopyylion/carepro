@@ -4,6 +4,7 @@ import Cta from "@/components/Cta";
 import Faqs from "@/components/Faqs";
 import Gallery from "@/components/Gallery";
 import Hero from "@/components/Hero";
+import LatestUpdate from "@/components/LatestUpdate";
 import Testimonials from "@/components/Testimonials";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <section className="h-[200px]">
 
         </section>
+        <LatestUpdate/>
         <Gallery/>
         <Cta/>
         <Testimonials/>

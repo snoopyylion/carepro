@@ -22,8 +22,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3">Company</h3>
           <ul className="space-y-2">
             <li><Link href="/aboutus" className="hover:text-green-400 transition">About Us</Link></li>
-            <li><Link href="https://wa.me/2348125444216" className="hover:text-green-400 transition">Privacy Policy</Link></li>
-            <li><Link href="https://wa.me/2348125444216" className="hover:text-green-400 transition">Terms & Conditions</Link></li>
+            <li><Link href="/privacy" className="hover:text-green-400 transition">Privacy Policy</Link></li>
           </ul>
         </div>
 
@@ -57,7 +56,7 @@ const Footer = () => {
                 </a>
             </div>
             <div className=" rounded-full  bg-gray-100 text-[#17426F]  p-2">
-            <a href="mailto:info@carepro.com" className="text-sm hover:text-green-600 transition">
+            <a href="mailto:careproacademyltd@gmail.com" className="text-sm hover:text-green-600 transition">
               <FaEnvelope />
             </a>
             </div>

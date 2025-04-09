@@ -72,7 +72,7 @@ const page: React.FC = () => {
   };
 
   return (
-    <div className="contact-us bg-[#f9f9f9] w-full px-4 sm:px-6 py-10 md:px-12 mt-16 relative">
+    <div className="contact-us bg-[#f9f9f9] w-full px-4 sm:px-6 py-10 md:px-12 mt-14 relative">
       <ToastContainer position="top-center" />
       {/* Header & Description */}
       <div className="text-center mb-6 sm:mb-8">
