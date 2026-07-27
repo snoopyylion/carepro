@@ -4,27 +4,27 @@ import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
-    {
-      "question": "What is the duration of the training program?",
-      "answer": "The duration of the training program varies depending on the specific course. Our caregiver training typically lasts between 6 to 12 weeks, with intensive practical and theoretical sessions to fully prepare students for international caregiving roles."
-    },
-    {
-      "question": "What learning options are available?",
-      "answer": "CarePro Academy offers flexible learning options, including in-person classes at our training center, online courses for remote learning, and hybrid programs that combine both. This ensures students can learn at their own pace while balancing other commitments."
-    },
-    {
-      "question": "What certifications will I receive?",
-      "answer": "Upon successful completion of the program, students receive internationally recognized certifications, including a Caregiver Certification, Basic Life Support (BLS) and First Aid certification, and other relevant healthcare qualifications required for overseas job placements."
-    },
-    {
-      "question": "What are the benefits included in the program?",
-      "answer": "Our program includes hands-on training with experienced healthcare professionals, visa guidance, and networking opportunities with global recruiters. Additionally, students receive mentorship and career counseling to help them transition into the caregiving profession abroad."
-    }
-  ]
-  
+  {
+    "question": "What is the duration of the training program?",
+    "answer": "The duration of the training program varies depending on the specific course. Our caregiver training typically lasts between 6 to 12 weeks, with intensive practical and theoretical sessions to fully prepare students for international caregiving roles."
+  },
+  {
+    "question": "What learning options are available?",
+    "answer": "CarePro Academy offers flexible learning options, including in-person classes at our training center, online courses for remote learning, and hybrid programs that combine both. This ensures students can learn at their own pace while balancing other commitments."
+  },
+  {
+    "question": "What certifications will I receive?",
+    "answer": "Upon successful completion of the program, students receive internationally recognized certifications, including a Caregiver Certification, Basic Life Support (BLS) and First Aid certification, and other relevant healthcare qualifications required for overseas job placements."
+  },
+  {
+    "question": "What are the benefits included in the program?",
+    "answer": "Our program includes hands-on training with experienced healthcare professionals, visa guidance, and networking opportunities with global recruiters. Additionally, students receive mentorship and career counseling to help them transition into the caregiving profession abroad."
+  }
+]
+
 
 const FAQSection = () => {
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
@@ -76,16 +76,12 @@ const FAQSection = () => {
           </p>
           <p className="mb-10 text-center text-green-600 text-sm sm:text-base md:text-lg">
             <a href="mailto:careproacademyltd@gmail.com" className="hover:underline">
-                careproacademyltd@gmail.com
-              </a><br /> <span>
-                <a href="tel:+2348125444216" className="hover:underline">
-                  +234 812 544 4216
-                </a>{" "}
-                or{" "}
-                <a href="tel:+2348112953103" className="hover:underline">
-                  +234 811 295 3103
-                </a>
-              </span>
+              careproacademyltd@gmail.com
+            </a><br /> <span>
+              <a href="tel:+2348125444216" className="hover:underline">
+                +234 812 544 4216
+              </a>
+            </span>
           </p>
 
           <div className="space-y-4">

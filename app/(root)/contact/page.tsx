@@ -88,7 +88,7 @@ const page: React.FC = () => {
         <div className="contact-left bg-[#17426F] text-white p-6 rounded-lg w-full md:w-2/5 relative overflow-hidden flex flex-col justify-between">
           <div className="contact-info space-y-4 sm:space-y-6 relative p-6 sm:p-8 z-20 mb-10">
             <div className="i">
-                <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-6">Contact Information</h2>
+              <h2 className="text-xl sm:text-2xl md:text-3xl text-white mb-6">Contact Information</h2>
             </div>
             <div className="phone flex items-center mb-4 sm:mb-6 gap-2 sm:gap-3 text-sm sm:text-base">
               <Phone size={18} />
@@ -96,10 +96,6 @@ const page: React.FC = () => {
                 <a href="tel:+2348125444216" className="hover:underline">
                   +234 812 544 4216
                 </a>{" "}
-                or{" "}
-                <a href="tel:+2348112953103" className="hover:underline">
-                  +234 811 295 3103
-                </a>
               </p>
             </div>
 
@@ -176,7 +172,7 @@ const page: React.FC = () => {
               <div className="second-row flex flex-col md:flex-row gap-4">
                 <div className="email w-full">
                   <label className="block text-gray-700 text-sm sm:text-base">Email</label>
-                  <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required  className="w-full p-2 border-b text-sm sm:text-base" />
+                  <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required className="w-full p-2 border-b text-sm sm:text-base" />
                 </div>
                 <div className="phone-number w-full">
                   <label className="block text-gray-700 text-sm sm:text-base">Phone Number</label>
@@ -186,7 +182,7 @@ const page: React.FC = () => {
 
               <div className="message">
                 <label className="block text-gray-700 text-sm sm:text-base">Message</label>
-                <textarea name="message" placeholder="Write your message.." value={formData.message} onChange={handleChange} required  className="w-full p-2 border-b h-24 sm:h-28 text-sm sm:text-base"></textarea>
+                <textarea name="message" placeholder="Write your message.." value={formData.message} onChange={handleChange} required className="w-full p-2 border-b h-24 sm:h-28 text-sm sm:text-base"></textarea>
               </div>
 
               <div className="mt-8 flex justify-end">
