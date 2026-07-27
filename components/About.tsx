@@ -29,7 +29,7 @@ const About = () => {
           className="flex-1"
         >
           <Image
-            src="/img/aboutimg.png"
+            src="/images/carepro-2.jpeg"
             width={500}
             height={500}
             alt="About Care-Pro Academy"
