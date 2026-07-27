@@ -57,19 +57,19 @@ const VideoGallery: React.FC = () => {
 
   return (
     <motion.section
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 1 }}
-    className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="bg-[#17426F] text-white py-20 px-6 sm:px-10 md:px-20">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <motion.h2
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        viewport={{ once: true }} 
-        className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold sm:text-4xl text-center text-white tracking-wide mb-14">
           What Our Students Are Saying
         </motion.h2>
 
@@ -91,38 +91,38 @@ const VideoGallery: React.FC = () => {
         >
           {videos.map((video) => (
             <SwiperSlide
-            key={video.id}
-            className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
-          >
-            <div
-              className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] cursor-pointer"
-              onClick={() => setSelectedVideo(video.url)}
+              key={video.id}
+              className="group relative rounded-xl bg-[#1e3a5f] overflow-hidden border border-[#2d4a6a] shadow-md transition-all duration-300 hover:shadow-xl hover:border-green-400"
             >
-              {/* Video Thumbnail or Placeholder */}
-              <img
+              <div
+                className="relative w-full h-[400px] sm:h-[450px] md:h-[500px] lg:h-[550px] cursor-pointer"
+                onClick={() => setSelectedVideo(video.url)}
+              >
+                {/* Video Thumbnail or Placeholder */}
+                <img
                   src={video.thumbnail || "/default-thumbnail.jpg"}
                   alt={video.title}
                   className="object-cover w-full h-full rounded-xl transform transition-transform duration-500 group-hover:scale-105"
                 />
 
-          
-              {/* Dark Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-          
-              {/* Video Title */}
-              <div className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg sm:text-xl">
-                {video.title}
+
+                {/* Dark Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
+
+                {/* Video Title */}
+                <div className="absolute bottom-4 left-4 right-4 text-white font-semibold text-lg sm:text-xl">
+                  {video.title}
+                </div>
+
+                {/* Play Button */}
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <span className="text-white text-4xl font-bold bg-black bg-opacity-50 px-5 py-3 rounded-full">
+                    ▶
+                  </span>
+                </div>
               </div>
-          
-              {/* Play Button */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-4xl font-bold bg-black bg-opacity-50 px-5 py-3 rounded-full">
-                  ▶
-                </span>
-              </div>
-            </div>
-          </SwiperSlide>
-          
+            </SwiperSlide>
+
           ))}
         </Swiper>
       </div>

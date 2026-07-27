@@ -46,29 +46,29 @@ const Testimonials = () => {
 
         {/* Pagination Controls */}
         <div className="flex justify-center items-center mt-8 gap-4 sm:gap-6">
-        <button
+          <button
             className={`px-4 sm:px-6 py-2 bg-[#17426F] text-white rounded-lg transition-all duration-300 
             ${currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-[#20507B]"}
             text-sm sm:text-base`}
             onClick={() => setCurrentPage(currentPage - 1)}
             disabled={currentPage === 1}
-        >
+          >
             Prev
-        </button>
+          </button>
 
-        <span className="text-base sm:text-lg font-semibold">
+          <span className="text-base sm:text-lg font-semibold">
             {currentPage} / {totalPages}
-        </span>
+          </span>
 
-        <button
+          <button
             className={`px-4 sm:px-6 py-2 bg-[#17426F] text-white rounded-lg transition-all duration-300 
             ${currentPage === totalPages ? "opacity-50 cursor-not-allowed" : "hover:bg-[#20507B]"}
             text-sm sm:text-base`}
             onClick={() => setCurrentPage(currentPage + 1)}
             disabled={currentPage === totalPages}
-        >
+          >
             Next
-        </button>
+          </button>
         </div>
 
       </div>
