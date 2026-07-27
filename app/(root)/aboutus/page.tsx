@@ -27,7 +27,7 @@ const page = () => {
       <AboutSection 
         title="Enriching Lives" 
         text="Welcome to Care-Pro Academy, a premier healthcare training institution based in Lagos, specializing in assistant healthcare and careworker training..."
-        imgSrc="/img/aboutimg.png"
+        imgSrc="/images/carepro-3.jpeg"
       />
 
       <motion.div
@@ -41,14 +41,14 @@ const page = () => {
       <AboutSection 
         title="Our Vision" 
         text="To redefine caregiving through education, shaping a new generation of globally certified and compassionate professionals."
-        imgSrc="/img/aboutimg.png"
+        imgSrc="/images/carepro-4.jpeg"
         reverse
       />
 
       <AboutSection 
         title="Our Mission" 
         text="To train caregivers with cutting-edge methodologies, hands-on experience, and globally recognized certifications..."
-        imgSrc="/img/aboutimg.png"
+        imgSrc="/images/carepro-5.jpeg"
       />
 
       <motion.div
