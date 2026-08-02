@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <div
       className="hero-container relative flex items-center justify-center px-4 sm:px-6 md:px-10 
-                 bg-[url('/images/hero.jpeg')] bg-contain bg-top min-h-screen"
+                 bg-[url('/images/hero.jpeg')] bg-cover bg-center md:bg-contain md:bg-top min-h-screen"
     >
       {/* Deep blue overlay allowing background faces to remain visible */}
       <div className="absolute inset-0 bg-[#041166]/80 z-0"></div>

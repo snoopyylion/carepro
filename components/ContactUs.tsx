@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import Button from "./Button";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
@@ -131,9 +130,8 @@ const ContactUs: React.FC = () => {
             <Image
               src="/img/contactimg.png"
               alt="Contact"
-              layout="fill"
-              objectFit="contain"
-              objectPosition="center"
+              fill
+              className="object-contain object-center"
             />
           </div>
         </div>
